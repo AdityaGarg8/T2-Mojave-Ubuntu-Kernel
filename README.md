@@ -49,6 +49,35 @@ Install the kernel using apt, for example kernel 5.7.9:
 apt-get install linux-headers-5.7.9-mbp linux-image-5.7.9-mbp
 ```
 
+### Building yourself
+
+Clone the repo using
+```bash
+git clone https://github.com/Redecorating/mbp-ubuntu-kernel
+```
+Open [jamlam's repo] in your browser.
+
+Check out the kernel version it is offering right now.
+
+Now edit build.sh file in mbp-ubuntu-kernel folder of your home directory. Replace the kernel version given in `KERNEL_VERSION` by the one on jamlam's repo.
+
+Now edit patch_driver.sh file in the same folder. Replace the commit hash in `APPLE_SMC_DRIVER_COMMIT_HASH` with the latest one in jamlam's repo. It can be found by click on the shortened hash or time elapsed since last update on the right of `jamlam`.
+
+Now open a terminal window and run
+
+```bash
+cd mbp-ubuntu-kernel
+sudo ./build.sh
+```
+
+The kernel shall take around an hour to compile. After that you shall find three .deb packages in `/root/work`.
+
+Install the `linux-headers` package using apt on terminal. Similarly install the `linux-image` package too.
+
+Restart your Mac.
+
+You may then delete the `/root/work` directory to free up space.
+
 ## Docs
 
 - Discord: <https://discord.gg/Uw56rqW>
@@ -88,3 +117,5 @@ apt-get install linux-headers-5.7.9-mbp linux-image-5.7.9-mbp
 - @aunali1 - thanks for ArchLinux Kernel CI and active support.
 - @ppaulweber - thanks for keyboard and Macbook Air patches
 - @mikeeq - thanks for the fedora kernel project and compilation scripts
+
+[jamlam's repo]: https://github.com/jamlam/mbp-16.1-linux-wifi
