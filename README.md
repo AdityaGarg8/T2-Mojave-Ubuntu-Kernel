@@ -78,8 +78,8 @@ You may then delete the `/root/work` directory using `sudo rm -r /root/work` to 
 - @MCMrARM - thanks for all RE work
 - @ozbenh - thanks for submitting NVME patch
 - @roadrunner2 - thanks for SPI (touchbar) driver
-- @aunali1 - thanks for ArchLinux Kernel CI and active support.
-- @jamlam - thanks for providing the Correlium wifi patch.
+- @aunali1 - thanks for ArchLinux Kernel CI and active support
+- @jamlam - thanks for providing the Correlium wifi patch
 - @ppaulweber - thanks for keyboard and Macbook Air patches
 - @mikeeq - thanks for the fedora kernel project and compilation scripts
 
