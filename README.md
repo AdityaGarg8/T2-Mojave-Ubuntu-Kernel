@@ -2,7 +2,9 @@
 
 Ubuntu/Mint/Debian kernel with Apple T2 patches built-in. This repo will try to keep up with kernel new releases. If you want to request for a specific kernel version, you may raise it as an issue or use the discussions tab.
 
-This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-ubuntu-kernel. Thank you @mikeeq and @marcosfad for the scripts and setup. 
+This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-ubuntu-kernel. Thank you @mikeeq and @marcosfad for the scripts and setup.
+
+Special thanks to Redecorating/mbp-ubuntu-kernel who edited the scripts for 16.x models.
 
 **If this repo helped you in any way, consider inviting a coffee to the people in the [credits](https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel#credits).**
 
@@ -74,6 +76,7 @@ You may then delete the `/root/work` directory using `sudo rm -r /root/work` to 
 
 ## Credits
 
+- @Redecorating - thanks for editing the scripts
 - @marcosfad - thanks for the original script for Ubuntu
 - @MCMrARM - thanks for all RE work
 - @ozbenh - thanks for submitting NVME patch
