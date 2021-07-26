@@ -4,9 +4,13 @@ Ubuntu/Mint/Debian kernel with Apple T2 patches built-in. This repo will try to 
 
 This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-ubuntu-kernel. Thank you @mikeeq and @marcosfad for the scripts and setup.
 
-Special thanks to Redecorating/mbp-ubuntu-kernel who edited the scripts for 16.x models.
+Special thanks to @Redecorating who edited the scripts for 16.x models.
 
 **If this repo helped you in any way, consider inviting a coffee to the people in the [credits](https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel#credits).**
+
+## Pre installation steps
+
+In case you have used an iso with kernel version **5.8.x or lower**, then follow the [DKMS Guide](http://wiki.t2linux.org/guides/dkms/) to uninstall old drivers and get new drivers for the kernels. It is required only once and must be done before installing a kernel from here.
 
 ## INSTALLATION
 
