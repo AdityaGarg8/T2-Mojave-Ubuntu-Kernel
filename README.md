@@ -1,6 +1,6 @@
 # mbp-ubuntu-kernel
 
-Ubuntu/Mint/Debian kernel 5.6+ with Apple T2 patches built-in. This repo will try to keep up with kernel new releases.
+Ubuntu/Mint/Debian kernel with Apple T2 patches built-in. This repo will try to keep up with kernel new releases.
 
 This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-ubuntu-kernel. Thank you @mikeeq and @marcosfad for the scripts and setup. 
 
@@ -10,7 +10,7 @@ This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-u
 
 ### The easy way
 
-Download the .deb packages of **linux headers** and **linux image** of the kernel you wish to install from the [releases](https://github.com/Redecorating/mbp-ubuntu-kernel/releases) section.
+Download the .deb packages of **linux headers** and **linux image** of the kernel you wish to install from the [releases](https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel/releases) section.
 
 On terminal, type `sudo apt install ` and then drag and drop the **linux headers** file to the terminal and press enter/return key.
 
@@ -22,20 +22,20 @@ Restart your Mac.
 
 Clone the repo using
 ```bash
-git clone https://github.com/Redecorating/mbp-ubuntu-kernel
+git clone https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel
 ```
 Open [jamlam's repo] in your browser.
 
 Check out the kernel version it is offering right now.
 
-Now edit build.sh file in mbp-ubuntu-kernel folder of your home directory. Replace the kernel version given in `KERNEL_VERSION` by the one on jamlam's repo.
+Now edit build.sh file in mbp-16.x-ubuntu-kernel folder of your home directory. Replace the kernel version given in `KERNEL_VERSION` by the one on jamlam's repo.
 
 Now edit patch_driver.sh file in the same folder. Replace the commit hash in `APPLE_SMC_DRIVER_COMMIT_HASH` with the latest one in jamlam's repo. It can be found by click on the shortened hash or time elapsed since last update on the right of `jamlam`.
 
 Now open a terminal window and run
 
 ```bash
-cd mbp-ubuntu-kernel
+cd mbp-16.x-ubuntu-kernel
 sudo ./build.sh
 ```
 
