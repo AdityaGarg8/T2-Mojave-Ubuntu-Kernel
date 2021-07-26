@@ -47,7 +47,7 @@ Install the **linux-headers** package first using `apt`. In case you do not know
 
 Restart your Mac.
 
-You may then delete the `/root/work` directory to free up space.
+You may then delete the `/root/work` directory using `sudo rm -r /root/work` to free up space.
 
 ## Docs
 
