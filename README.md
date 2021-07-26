@@ -30,7 +30,7 @@ Open [jamlam's repo] in your browser.
 
 Check out the kernel version it is offering right now.
 
-Now edit build.sh file in mbp-16.x-ubuntu-kernel folder of your home directory. Replace the kernel version given in `KERNEL_VERSION` by the one on jamlam's repo.
+Now edit build.sh file in **mbp-16.x-ubuntu-kernel** folder of your home directory. Replace the kernel version given in `KERNEL_VERSION` by the one on jamlam's repo.
 
 Now edit patch_driver.sh file in the same folder. Replace the commit hash in `APPLE_SMC_DRIVER_COMMIT_HASH` with the latest one in jamlam's repo. It can be found by click on the shortened hash or time elapsed since last update on the right of `jamlam`.
 
