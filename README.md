@@ -12,6 +12,8 @@ This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-u
 
 Download the .deb packages of **linux headers** and **linux image** of the kernel you wish to install from the [releases](https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel/releases) section.
 
+Install them using `apt`. In case you do not know how to do so, follow the instructions given below.
+
 On terminal, type `sudo apt install ` and then drag and drop the **linux headers** file to the terminal and press enter/return key.
 
 Do the similar process for **linux images** package.
