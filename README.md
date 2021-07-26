@@ -10,13 +10,13 @@ This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-u
 
 ### The easy way
 
-Download the .deb packages of **linux headers** and **linux image** of the kernel you wish to install from the [releases](https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel/releases) section.
+Download the .deb packages of **linux-headers** and **linux-image** of the kernel you wish to install from the [releases](https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel/releases) section.
 
-Install them using `apt`. In case you do not know how to do so, follow the instructions given below. Else you are good to go.
+Install **linux-headers** first and then **linux-image** using `apt` and restart your Mac. In case you do not know how to do so, follow the instructions given below. Else you are good to go.
 
-On terminal, type `sudo apt install ` and then drag and drop the **linux headers** file to the terminal and press enter/return key.
+On terminal, type `sudo apt install ` and then drag and drop the **linux-headers** file to the terminal and press enter/return key.
 
-Do the similar process for **linux images** package.
+Do the similar process for **linux-images** package.
 
 Restart your Mac.
 
@@ -43,7 +43,7 @@ sudo ./build.sh
 
 The kernel shall take around an hour to compile. After that you shall find three .deb packages in `/root/work`.
 
-Install the `linux-headers` package using `apt`. In case you do not know how to do so, follow the instructions described in the above **The easy way** section. Similarly install the `linux-image` package too.
+Install the **linux-headers** package first using `apt`. In case you do not know how to do so, follow the instructions described in the above **The easy way** section. Similarly install the **linux-image** package too.
 
 Restart your Mac.
 
