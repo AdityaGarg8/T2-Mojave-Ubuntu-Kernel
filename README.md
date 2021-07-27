@@ -4,7 +4,7 @@ Ubuntu/Mint/Debian kernel with Apple T2 patches built-in. This repo will try to 
 
 This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-ubuntu-kernel. Thank you @mikeeq and @marcosfad for the scripts and setup.
 
-Special thanks to @Redecorating who edited the scripts for 16.x models.
+Special thanks to @Redecorating who edited the scripts for Big Sur firmware.
 
 **If this repo helped you in any way, consider inviting a coffee to the people in the [credits](https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel#credits).**
 
