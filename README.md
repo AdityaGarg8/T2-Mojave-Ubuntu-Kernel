@@ -1,4 +1,4 @@
-# mbp-16.x-ubuntu-kernel
+# mbp-16.x-ubuntu-kerne
 
 Ubuntu/Mint/Debian kernel with Apple T2 patches built-in. This repo will try to keep up with kernel new releases. If you want to request for a specific kernel version, you may raise it as an issue or use the discussions tab.
 
