@@ -59,7 +59,9 @@ jobs:
             /tmp/artifacts/sha256
             /tmp/artifacts/*.deb
           tag_name: v${{ steps.build.outputs.tag }}
-          body: linux-headers must be installed before linux-image.
+          body: |
+           linux-headers must be installed before linux-image.
+           Installation guide to help you out is available [here](https://github.com/AdityaGarg8/mbp-16.x-ubuntu-kernel/#pre-installation-steps).
           draft: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
