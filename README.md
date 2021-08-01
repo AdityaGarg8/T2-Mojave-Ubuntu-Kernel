@@ -1,5 +1,5 @@
 # mbp-16.x-ubuntu-kernel
-This branch is for experiments
+
 Ubuntu/Mint/Debian kernel with Apple T2 patches built-in. This repo will try to keep up with kernel new releases. If you want to request for a specific kernel version, you may raise it as an issue or use the discussions tab.
 
 This project is closely inspired by mikeeq/mbp-fedora-kernel and marcosfad/mbp-ubuntu-kernel. Thank you @mikeeq and @marcosfad for the scripts and setup.
