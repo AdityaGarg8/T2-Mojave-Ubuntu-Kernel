@@ -8,7 +8,7 @@ BUILD_PATH=/tmp/build-kernel
 # Patches
 APPLE_SMC_DRIVER_GIT_URL=https://github.com/AdityaGarg8/mbp-16.1-linux-wifi.git
 APPLE_SMC_DRIVER_BRANCH_NAME=main
-APPLE_SMC_DRIVER_COMMIT_HASH=a290123c329ea037cb10c0b13e637a430f282f13
+APPLE_SMC_DRIVER_COMMIT_HASH=77bbd52e2cb53330691e3f5bb03cc10eef8f6554
 ## BCE
 #APPLE_BCE_DRIVER_GIT_URL=https://github.com/aunali1/mbp2018-bridge-drv.git
 #APPLE_BCE_DRIVER_BRANCH_NAME=aur
