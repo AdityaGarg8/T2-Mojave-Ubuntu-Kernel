@@ -44,11 +44,11 @@ jobs:
           dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
           ls -l
 
-#      - name: Upload package artifact
- #       uses: actions/upload-artifact@v2
-  #      with:
-   #       name: linux-mbp-16x-wifi-${{ steps.build.outputs.tag }}
-    #      path: /tmp/artifacts/*
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: linux-mbp-16x-wifi-${{ steps.build.outputs.tag }}
+          path: /tmp/artifacts/*
 
       - name: Release
         if: github.ref == 'refs/heads/master'
