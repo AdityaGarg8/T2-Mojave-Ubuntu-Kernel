@@ -87,7 +87,7 @@ make olddefconfig
 echo "" >"${KERNEL_PATH}"/.scmversion
 
 # Build Deb packages
-make -j "$(getconf _NPROCESSORS_ONLN)" deb-pkg LOCALVERSION=-T2-Big-Sur KDEB_PKGVERSION="$(make kernelversion)-$(get_next_version)"
+make -j "$(getconf _NPROCESSORS_ONLN)" deb-pkg LOCALVERSION=-t2-big-sur KDEB_PKGVERSION="$(make kernelversion)-$(get_next_version)"
 
 #### Copy artifacts to shared volume
 echo >&2 "===]> Info: Copying debs and calculating SHA256 ... "
