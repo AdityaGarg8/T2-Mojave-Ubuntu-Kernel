@@ -49,7 +49,7 @@ apt-get install -y build-essential fakeroot libncurses-dev bison flex libssl-dev
   bc rsync cpio dh-modaliases debhelper kernel-wedge curl
 
 ### get Kernel
-git clone --depth 1 --single-branch --branch "v${KERNEL_VERSION}" \
+git clone --depth 1 --single-branch --branch "${KERNEL_VERSION}" \
   "${KERNEL_REPOSITORY}" "${KERNEL_PATH}"
 cd "${KERNEL_PATH}" || exit
 
