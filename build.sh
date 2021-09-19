@@ -5,7 +5,7 @@ set -eu -o pipefail
 ## Update docker image tag, because kernel build is using `uname -r` when defining package version variable
 # KERNEL_VERSION=$(curl -s https://www.kernel.org | grep '<strong>' | head -3 | tail -1 | cut -d'>' -f3 | cut -d'<' -f1)
 KERNEL_VERSION=hwe-5.13
-PKGREL=1
+PKGREL=5.13.0-14.14
 #KERNEL_REPOSITORY=git://kernel.ubuntu.com/virgin/linux-stable.git
 KERNEL_REPOSITORY=git://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal
 REPO_PATH=$(pwd)
