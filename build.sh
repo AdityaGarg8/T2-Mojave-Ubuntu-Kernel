@@ -10,7 +10,7 @@ PKGREL=1
 #KERNEL_REPOSITORY=git://kernel.ubuntu.com/virgin/linux-stable.git
 KERNEL_REPOSITORY=git://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal
 REPO_PATH=$(pwd)
-WORKING_PATH=/root/work
+WORKING_PATH=/home/work
 KERNEL_PATH="${WORKING_PATH}/linux-kernel"
 
 ### Debug commands
