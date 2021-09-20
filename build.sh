@@ -5,7 +5,8 @@ set -eu -o pipefail
 ## Update docker image tag, because kernel build is using `uname -r` when defining package version variable
 # KERNEL_VERSION=$(curl -s https://www.kernel.org | grep '<strong>' | head -3 | tail -1 | cut -d'>' -f3 | cut -d'<' -f1)
 KERNEL_VERSION=hwe-5.13
-PKGREL=5.13.0-14.14
+UBUNTU_REL=14.14
+PKGREL=1
 #KERNEL_REPOSITORY=git://kernel.ubuntu.com/virgin/linux-stable.git
 KERNEL_REPOSITORY=git://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal
 REPO_PATH=$(pwd)
@@ -21,17 +22,10 @@ grep 'model name' /proc/cpuinfo | uniq
 
 get_next_version () {
   echo $PKGREL
-  #curl -s https://mbp-ubuntu-kernel.herokuapp.com/ -L | grep "linux-image-${KERNEL_VERSION}-${1}" > /dev/null
-  #OLD_BUILD_EXIST=$?
-  #if test $OLD_BUILD_EXIST -eq 0
-  #then
-  #  LATEST_BUILD=$(curl -s https://mbp-ubuntu-kernel.herokuapp.com/ -L | grep "linux-image-${KERNEL_VERSION}-${1}" |
-  #    grep a | cut -d'>' -f2 | cut -d'<' -f1 |
-  #    sort -r | head -n 1 | cut -d'-' -f6 | cut -d'_' -f1)
-  #else
-  #  LATEST_BUILD=0
-  #fi
-  #echo "$((LATEST_BUILD+1))"
+}
+
+get_local_version () {
+  echo $UBUNTU_REL
 }
 
 ### Clean up
@@ -87,7 +81,7 @@ make olddefconfig
 echo "" >"${KERNEL_PATH}"/.scmversion
 
 # Build Deb packages
-make -j "$(getconf _NPROCESSORS_ONLN)" deb-pkg LOCALVERSION=-t2-big-sur-hwe KDEB_PKGVERSION="$(make kernelversion)-$(get_next_version)"
+make -j "$(getconf _NPROCESSORS_ONLN)" deb-pkg LOCALVERSION="-$(get_local_version)-hwe-t2-big-sur KDEB_PKGVERSION="$(make kernelversion)-$(get_local_version)-$(get_next_version)"
 
 #### Copy artifacts to shared volume
 echo >&2 "===]> Info: Copying debs and calculating SHA256 ... "
