@@ -33,12 +33,11 @@ jobs:
         id: build
         run: |
           mkdir /tmp/artifacts
-          VERSION=$(grep ^KERNEL_VERSION build.sh | head -n1| cut -d = -f2)
-          REL=$(grep "PKGREL=\d*" build.sh | cut -d = -f2)
-          #REL=$( git tag |grep -F $VERSION|sort -r|head -n1|tr -d v)
-          echo Building $VERSION-$REL
-          echo "::set-output name=tag::${VERSION}-${REL}"
           sudo ./build.sh
+          VERSION=$(make kernelversion)
+          REL=$(get_local_version)-hwe-$(get_next_version)
+          echo Built $VERSION-$REL
+          echo "::set-output name=tag::${VERSION}-${REL}"
           cd /tmp/artifacts
           ls -l
           dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
@@ -51,7 +50,7 @@ jobs:
           path: /tmp/artifacts/*
 
       - name: Release
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/Hwe'
         uses: softprops/action-gh-release@v1
         with:
           files: |
