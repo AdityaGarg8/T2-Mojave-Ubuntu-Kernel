@@ -36,7 +36,7 @@ jobs:
           UREL=$(grep ^UBUNTU_REL build.sh | head -n1 | cut -d = -f2)
           PREL=$(grep "PKGREL=\d*" build.sh | cut -d = -f2)
           sudo ./build.sh
-          cd /root/work/linux-kernel
+          sudo cd /root/work/linux-kernel
           VERSION=$(make kernelversion)
           echo Built $VERSION-$UREL-hwe-$PREL
           echo "::set-output name=tag::${VERSION}-${UREL}-hwe-${PREL}"
