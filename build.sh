@@ -7,7 +7,6 @@ set -eu -o pipefail
 KERNEL_VERSION=hwe-5.13
 UBUNTU_REL=14.14
 PKGREL=1
-#KERNEL_REPOSITORY=git://kernel.ubuntu.com/virgin/linux-stable.git
 KERNEL_REPOSITORY=git://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/focal
 REPO_PATH=$(pwd)
 WORKING_PATH=/home/work
@@ -81,7 +80,7 @@ make olddefconfig
 echo "" >"${KERNEL_PATH}"/.scmversion
 
 # Build Deb packages
-make -j "$(getconf _NPROCESSORS_ONLN)" deb-pkg LOCALVERSION="-$(get_local_version)-hwe-t2-big-sur" KDEB_PKGVERSION="$(make kernelversion)-$(get_local_version)-hwe-$(get_next_version)"
+make -j "$(getconf _NPROCESSORS_ONLN)" deb-pkg LOCALVERSION="-$(get_local_version)-hwe-t2-mojave" KDEB_PKGVERSION="$(make kernelversion)-$(get_local_version)-hwe-$(get_next_version)"
 
 #### Copy artifacts to shared volume
 echo >&2 "===]> Info: Copying debs and calculating SHA256 ... "

@@ -48,7 +48,7 @@ jobs:
       - name: Upload package artifact
         uses: actions/upload-artifact@v2
         with:
-          name: linux-T2-Big-Sur-${{ steps.build.outputs.tag }}
+          name: linux-T2-Mojave-${{ steps.build.outputs.tag }}
           path: /tmp/artifacts/*
 
       - name: Release
