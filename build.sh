@@ -4,7 +4,7 @@ set -eu -o pipefail
 
 KERNEL_VERSION=5.14.8
 PKGREL=1
-#KERNEL_REPOSITORY=git://kernel.ubuntu.com/virgin/linux-stable.git
+#KERNEL_REPOSITORY=git://kernel.ubuntu.com/virgin/linux-stable
 KERNEL_REPOSITORY=https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
 REPO_PATH=$(pwd)
 WORKING_PATH=/root/work
