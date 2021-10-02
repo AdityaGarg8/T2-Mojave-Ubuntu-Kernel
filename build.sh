@@ -70,9 +70,9 @@ while IFS= read -r file; do
   patch -p1 <"$file"
 done < <(find "${WORKING_PATH}/patches" -type f -name "*.patch" | sort)
 
-chmod a+x "${KERNEL_PATH}"/debian/rules
-chmod a+x "${KERNEL_PATH}"/debian/scripts/*
-chmod a+x "${KERNEL_PATH}"/debian/scripts/misc/*
+#chmod a+x "${KERNEL_PATH}"/debian/rules
+#chmod a+x "${KERNEL_PATH}"/debian/scripts/*
+#chmod a+x "${KERNEL_PATH}"/debian/scripts/misc/*
 
 echo >&2 "===]> Info: Bulding src... "
 
