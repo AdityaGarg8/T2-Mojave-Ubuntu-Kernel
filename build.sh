@@ -44,7 +44,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y build-essential fakeroot libncurses-dev bison flex libssl-dev libelf-dev \
   openssl dkms libudev-dev libpci-dev libiberty-dev autoconf wget xz-utils git \
-  bc rsync cpio dh-modaliases debhelper kernel-wedge curl
+  libcap-dev bc rsync cpio dh-modaliases debhelper kernel-wedge curl gawk dwarves
 
 ### get Kernel
 git clone --depth 1 --single-branch --branch "v${KERNEL_VERSION}" \
