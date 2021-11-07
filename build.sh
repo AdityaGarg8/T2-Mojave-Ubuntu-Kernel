@@ -2,7 +2,7 @@
 
 set -eu -o pipefail
 
-KERNEL_VERSION=5.15
+KERNEL_VERSION=5.15.1
 PKGREL=1
 #KERNEL_REPOSITORY=git://kernel.ubuntu.com/virgin/linux-stable
 KERNEL_REPOSITORY=https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
