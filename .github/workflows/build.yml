@@ -51,7 +51,7 @@ jobs:
           path: /tmp/artifacts/*
 
       - name: Release
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/LTS'
         uses: softprops/action-gh-release@v1
         with:
           files: |
@@ -61,5 +61,6 @@ jobs:
           tag_name: v${{ steps.build.outputs.tag }}
           body: linux-headers must be installed before linux-image.
           draft: false
+          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
